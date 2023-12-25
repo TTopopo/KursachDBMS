@@ -1,0 +1,52 @@
+C:\Users\eduar\OneDrive\Рабочий стол\course-work-db\courseDataBase\courseDataBase\bin\Debug\courseDataBase.exe.config
+C:\Users\eduar\OneDrive\Рабочий стол\course-work-db\courseDataBase\courseDataBase\bin\Debug\courseDataBase.exe
+C:\Users\eduar\OneDrive\Рабочий стол\course-work-db\courseDataBase\courseDataBase\bin\Debug\courseDataBase.pdb
+C:\Users\eduar\OneDrive\Рабочий стол\course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.csproj.AssemblyReference.cache
+C:\Users\eduar\OneDrive\Рабочий стол\course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Properties.Resources.resources
+C:\Users\eduar\OneDrive\Рабочий стол\course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.csproj.GenerateResource.cache
+C:\Users\eduar\OneDrive\Рабочий стол\course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.csproj.CoreCompileInputs.cache
+C:\Users\eduar\OneDrive\Рабочий стол\course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.exe
+C:\Users\eduar\OneDrive\Рабочий стол\course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.pdb
+C:\Users\eduar\OneDrive\Рабочий стол\course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Sign_in.resources
+C:\Users\eduar\OneDrive\Рабочий стол\course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Sign_up.resources
+C:\Users\eduar\OneDrive\Рабочий стол\course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.AdminPage.resources
+C:\Users\eduar\OneDrive\Рабочий стол\course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.UserPage.resources
+C:\Users\eduar\OneDrive\Рабочий стол\course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Add_Data.resources
+C:\Users\eduar\OneDrive\Рабочий стол\course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Add_Data_Bus.resources
+C:\Users\eduar\OneDrive\Рабочий стол\course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Add_Data_Driver.resources
+C:\Users\eduar\OneDrive\Рабочий стол\_course-work-db\courseDataBase\courseDataBase\bin\Debug\courseDataBase.exe.config
+C:\Users\eduar\OneDrive\Рабочий стол\_course-work-db\courseDataBase\courseDataBase\bin\Debug\courseDataBase.exe
+C:\Users\eduar\OneDrive\Рабочий стол\_course-work-db\courseDataBase\courseDataBase\bin\Debug\courseDataBase.pdb
+C:\Users\eduar\OneDrive\Рабочий стол\_course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.csproj.AssemblyReference.cache
+C:\Users\eduar\OneDrive\Рабочий стол\_course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Add_Data.resources
+C:\Users\eduar\OneDrive\Рабочий стол\_course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Add_Data_Bus.resources
+C:\Users\eduar\OneDrive\Рабочий стол\_course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Add_Data_Driver.resources
+C:\Users\eduar\OneDrive\Рабочий стол\_course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.AdminPage.resources
+C:\Users\eduar\OneDrive\Рабочий стол\_course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Sign_in.resources
+C:\Users\eduar\OneDrive\Рабочий стол\_course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Properties.Resources.resources
+C:\Users\eduar\OneDrive\Рабочий стол\_course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Sign_up.resources
+C:\Users\eduar\OneDrive\Рабочий стол\_course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.UserPage.resources
+C:\Users\eduar\OneDrive\Рабочий стол\_course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.csproj.GenerateResource.cache
+C:\Users\eduar\OneDrive\Рабочий стол\_course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.csproj.CoreCompileInputs.cache
+C:\Users\eduar\OneDrive\Рабочий стол\_course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.exe
+C:\Users\eduar\OneDrive\Рабочий стол\_course-work-db\courseDataBase\courseDataBase\obj\Debug\courseDataBase.pdb
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\bin\Debug\courseDataBase.exe.config
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\bin\Debug\courseDataBase.exe
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\bin\Debug\courseDataBase.pdb
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\obj\Debug\courseDataBase.csproj.AssemblyReference.cache
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\obj\Debug\courseDataBase.AdminPage.resources
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Sign_in.resources
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Properties.Resources.resources
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Sign_up.resources
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\obj\Debug\courseDataBase.UserPage.resources
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\obj\Debug\courseDataBase.csproj.GenerateResource.cache
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\obj\Debug\courseDataBase.csproj.CoreCompileInputs.cache
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\obj\Debug\courseDataBase.exe
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\obj\Debug\courseDataBase.pdb
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Add_Data_Object.resources
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Add_Data_Customer.resources
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Add_Data_Foreman.resources
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Add_Data_Worker.resources
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Add_Data_Stage.resources
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\obj\Debug\courseDataBase.Add_Data_Step.resources
+C:\Users\nekit\Desktop\courseDataBase\courseDataBase\obj\Debug\courseDataBase.ForemanPage.resources
