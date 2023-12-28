@@ -9,6 +9,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,8 +22,11 @@ namespace courseDataBase
         int IdUser;
         int id_Prorab;
         int id_Object;
+        int id_Stoge;
+        int id_Step;
         int selectedRowIdProrab;
         DataBase database = new DataBase();
+
         public ForemanPage()
         {
             InitializeComponent();
@@ -35,6 +39,11 @@ namespace courseDataBase
             CreateColumsOobject1();
             RefreshDataGridOobject(dataGridView2);
             CreateColumsWorker1();
+
+            CreateColumsStege();
+            RefreshDataGridStageConstruction(dataGridView5_stage_construction);
+            CreateColumsStep();
+            RefreshDataGridStepConstruction(dataGridView6_step_construction);
         }
         private void InsertImageBefore()
         {
@@ -152,7 +161,7 @@ namespace courseDataBase
             {
                 // Обработка ошибок, если возникли
                 MessageBox.Show("Произошла ошибка: " + ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }  
+            }
         }
         private void CreateColumsOobject1() // инициализация столбцов для dataGridView_route
         {
@@ -180,7 +189,27 @@ namespace courseDataBase
             dataGridView1.Columns.Add("id_Prorab", "id_Prorab");
             dataGridView1.Columns.Add("IsNew", String.Empty);
         }
-        
+        private void CreateColumsStege() // инициализация столбцов для dataGridView4_worker
+        {
+            dataGridView5_stage_construction.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dataGridView5_stage_construction.Columns.Add("id", "id");
+            dataGridView5_stage_construction.Columns.Add("StartDate", "Дата начала");
+            dataGridView5_stage_construction.Columns.Add("СompletionDate", "Дата завершения");
+            dataGridView5_stage_construction.Columns.Add("TitleStage", "Название этапа");
+            dataGridView5_stage_construction.Columns.Add("IsNew", String.Empty);
+        }
+        private void CreateColumsStep()  // инициализация столбцов для dataGridView4_worker
+        {
+            dataGridView6_step_construction.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dataGridView6_step_construction.Columns.Add("id", "id");
+            dataGridView6_step_construction.Columns.Add("StartDate", "Дата начала");
+            dataGridView6_step_construction.Columns.Add("СompletionDate", "Дата завершения");
+            dataGridView6_step_construction.Columns.Add("TitleStep", "Название шага");
+            dataGridView6_step_construction.Columns.Add("IsNew", String.Empty);
+        }
+
 
         private void dataGridView2_Click(object sender, EventArgs e) //объект
         {
@@ -201,7 +230,7 @@ namespace courseDataBase
             SqlCommand command1 = new SqlCommand(queryStringIdUser, database.getConnection());
             database.openConnection();
             // Выполнение запроса и запись результата в переменную
-            id_Prorab = Convert.ToInt32(command1.ExecuteScalar());  
+            id_Prorab = Convert.ToInt32(command1.ExecuteScalar());
 
             dataGridView1.Rows.Clear();
 
@@ -209,7 +238,7 @@ namespace courseDataBase
 
             SqlCommand command3 = new SqlCommand(sIdUser, database.getConnection());
 
-           
+
 
             SqlDataReader reader3 = command3.ExecuteReader();
 
@@ -268,8 +297,17 @@ namespace courseDataBase
             }
             dgw_worker.Rows.Add(record.GetInt32(0), record.GetString(1), record.GetString(2), record.GetString(3), record.GetString(4), record.GetString(5), value6, RowState.ModfieldNew);
         }
+        private void ReadSingleRowStageConstruction(DataGridView dgw_stage_construction, IDataRecord record)//этап
+        {
+            dgw_stage_construction.Rows.Add(record.GetInt32(0), record.GetDateTime(1), record.GetDateTime(2), record.GetString(3), RowState.ModfieldNew);
+        }
+        private void ReadSingleGridStepConstruction(DataGridView dgw_step_construction, IDataRecord record)//шаг
+        {
+            dgw_step_construction.Rows.Add(record.GetInt32(0), record.GetDateTime(1), record.GetDateTime(2), record.GetString(3), RowState.ModfieldNew);
+        }
         private void RefreshDataGridOobject(DataGridView dgw_oobject)//объект
         {
+             
             dgw_oobject.Rows.Clear();
 
             string queryString = $"select * from oobject";
@@ -283,6 +321,42 @@ namespace courseDataBase
             while (reader.Read())
             {
                 ReadSingleRowOobject(dgw_oobject, reader);
+            }
+            reader.Close();
+        }
+        private void RefreshDataGridStageConstruction(DataGridView dgw_stage_construction)
+        {
+            dgw_stage_construction.Rows.Clear();
+
+            string queryString = $"select * from stage_construction";
+
+            SqlCommand command = new SqlCommand(queryString, database.getConnection());
+
+            database.openConnection();
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                ReadSingleRowStageConstruction(dgw_stage_construction, reader);
+            }
+            reader.Close();
+        }
+        private void RefreshDataGridStepConstruction(DataGridView dgw_step_construction)
+        {
+            dgw_step_construction.Rows.Clear();
+
+            string queryString = $"select * from step_construction";
+
+            SqlCommand command = new SqlCommand(queryString, database.getConnection());
+
+            database.openConnection();
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                ReadSingleGridStepConstruction(dgw_step_construction, reader);
             }
             reader.Close();
         }
@@ -328,6 +402,172 @@ namespace courseDataBase
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button37_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox35_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button38_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button34_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button35_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button36_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView5_stage_construction_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void BUT_cancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BUT_confirm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView6_step_construction_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button37_Click_1(object sender, EventArgs e)
+        {
+            ClearStage();
+        }
+        private void ClearStage()//очистка этапа
+        {
+            textBox10.Text = string.Empty;
+            textBox9.Text = string.Empty;
+            textBox8.Text = string.Empty; 
+        }
+        private void ClearStep() //очистка шага
+        {
+            textBox7.Text = string.Empty;
+            textBox6.Text = string.Empty;
+            textBox5.Text = string.Empty; 
+        }
+
+        private void button11_Click(object sender, EventArgs e)//очистка шаг строительства 
+    {
+            ClearStep();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            RefreshDataGridStepConstruction(dataGridView6_step_construction);
+            ClearStep();
+        }
+
+        private void button38_Click_1(object sender, EventArgs e)
+        {
+            RefreshDataGridStageConstruction(dataGridView5_stage_construction);
+            ClearStage();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+                database.openConnection();
+
+                string status = comboBox1.SelectedItem.ToString(); 
+
+                var changeQuery = $"UPDATE oobject SET Statuss = '{status}' WHERE id = '{dataGridView2.Rows[IdUser].Cells[0].Value.ToString()}'";
+
+                var command = new SqlCommand(changeQuery, database.getConnection());
+                command.ExecuteNonQuery();
+
+                 RefreshDataGridOobject(dataGridView2);
+
+                database.closeConnection();
+            
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            database.openConnection(); 
+            string TitleStage = textBox10.Text;
+            string StartDate = textBox9.Text;
+            string СompletionDate = textBox8.Text;
+
+            var changeQuery = $"UPDATE stage_construction SET TitleStage = '{TitleStage}', StartDate = '{StartDate}',СompletionDate = '{СompletionDate}' WHERE id = '{dataGridView5_stage_construction.Rows[id_Stoge].Cells[0].Value.ToString()}'"; 
+
+            var command = new SqlCommand(changeQuery, database.getConnection());
+            command.ExecuteNonQuery();
+
+            RefreshDataGridStageConstruction(dataGridView5_stage_construction);
+
+            database.closeConnection();
+        }
+
+        private void dataGridView5_stage_construction_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            id_Stoge = e.RowIndex;
+        }
+
+        private void dataGridView6_step_construction_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView6_step_construction_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            id_Step = e.RowIndex;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            database.openConnection();
+            string TitleStep = textBox7.Text;
+            string StartDate = textBox6.Text;
+            string СompletionDate = textBox5.Text;
+
+            var changeQueryy = $"UPDATE step_construction SET TitleStep = '{TitleStep}', StartDate = '{StartDate}',СompletionDate = '{СompletionDate}' WHERE id = '{dataGridView6_step_construction.Rows[id_Step].Cells[0].Value.ToString()}'";
+
+            var command = new SqlCommand(changeQueryy, database.getConnection());
+            command.ExecuteNonQuery();
+
+            RefreshDataGridStepConstruction(dataGridView6_step_construction);
+
+            database.closeConnection();
         }
     }
 }

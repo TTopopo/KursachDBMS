@@ -20,8 +20,8 @@ namespace courseDataBase
             StartPosition = FormStartPosition.CenterScreen; // стартовая позиция окна (центр)
 
             // временное заполнение полей
-            textBox_login.Text = "foreman";
-            textBox_password.Text = "foreman";
+            textBox_login.Text = "admin";
+            textBox_password.Text = "admin";
         }
 
         private void log_in_load(object sender, EventArgs e)

@@ -52,6 +52,7 @@
             this.dataGridView6_step_construction = new System.Windows.Forms.DataGridView();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.button12 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
@@ -75,11 +76,13 @@
             this.dataGridView2_customer = new System.Windows.Forms.DataGridView();
             this.panel19 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel16 = new System.Windows.Forms.Panel();
             this.button37 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.textBox35 = new System.Windows.Forms.TextBox();
             this.button38 = new System.Windows.Forms.Button();
             this.panel39 = new System.Windows.Forms.Panel();
@@ -111,6 +114,8 @@
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
             this.textBox_Experience = new System.Windows.Forms.TextBox();
             this.textBox_Position = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
@@ -125,9 +130,11 @@
             this.label20 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
+            this.pbPhoto = new System.Windows.Forms.PictureBox();
             this.dataGridView4_worker = new System.Windows.Forms.DataGridView();
             this.panel15 = new System.Windows.Forms.Panel();
             this.BUT_driver_ClearField = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textBox_driver_SEARCH = new System.Windows.Forms.TextBox();
             this.BUT_driver_Refresh = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -157,6 +164,7 @@
             this.dataGridView3_foreman = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
             this.BUT_bus_ClearField = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox_bus_SEARCH = new System.Windows.Forms.TextBox();
             this.BUT_bus_Refresh = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -167,6 +175,10 @@
             this.BUT_Change = new System.Windows.Forms.Button();
             this.BUT_Delete = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox_ID = new System.Windows.Forms.TextBox();
             this.textBox_Title = new System.Windows.Forms.TextBox();
@@ -180,28 +192,19 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox_after = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox_before = new System.Windows.Forms.PictureBox();
             this.dataGridView1_oobject = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.OBJ_ClearFields = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox_SEARCH = new System.Windows.Forms.TextBox();
             this.BUT_Refresh = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.pictureBox_after = new System.Windows.Forms.PictureBox();
-            this.pictureBox_before = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pbPhoto = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
             this.tabPage6.SuspendLayout();
             this.panel28.SuspendLayout();
             this.panel29.SuspendLayout();
@@ -209,6 +212,7 @@
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6_step_construction)).BeginInit();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel22.SuspendLayout();
@@ -216,8 +220,10 @@
             this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2_customer)).BeginInit();
             this.panel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel39.SuspendLayout();
             this.panel40.SuspendLayout();
             this.panel41.SuspendLayout();
@@ -229,8 +235,10 @@
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4_worker)).BeginInit();
             this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel24.SuspendLayout();
             this.panel25.SuspendLayout();
@@ -238,23 +246,18 @@
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3_foreman)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_oobject)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_after)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_before)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_oobject)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPhoto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -278,7 +281,7 @@
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(956, 855);
             this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Шаг Строительство";
+            this.tabPage6.Text = "Шаг Строительства";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // panel28
@@ -503,6 +506,15 @@
             this.button11.Text = "Очистить поля";
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::courseDataBase.Properties.Resources.magnifier_1_icon_icons_com_56924__1_;
+            this.pictureBox6.Location = new System.Drawing.Point(146, 14);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(49, 49);
+            this.pictureBox6.TabIndex = 11;
+            this.pictureBox6.TabStop = false;
             // 
             // textBox11
             // 
@@ -761,6 +773,15 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::courseDataBase.Properties.Resources.magnifier_1_icon_icons_com_56924__1_;
+            this.pictureBox5.Location = new System.Drawing.Point(146, 14);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(49, 49);
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -794,7 +815,7 @@
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(956, 855);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Этап Строительство";
+            this.tabPage4.Text = "Этап Строительства";
             this.tabPage4.UseVisualStyleBackColor = true;
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
@@ -821,6 +842,15 @@
             this.button37.Text = "Очистить поля";
             this.button37.UseVisualStyleBackColor = false;
             this.button37.Click += new System.EventHandler(this.button37_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::courseDataBase.Properties.Resources.magnifier_1_icon_icons_com_56924__1_;
+            this.pictureBox4.Location = new System.Drawing.Point(146, 14);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(49, 49);
+            this.pictureBox4.TabIndex = 11;
+            this.pictureBox4.TabStop = false;
             // 
             // textBox35
             // 
@@ -1187,6 +1217,26 @@
             this.panel13.TabIndex = 15;
             this.panel13.Paint += new System.Windows.Forms.PaintEventHandler(this.panel13_Paint_1);
             // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox9.Location = new System.Drawing.Point(160, 213);
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(451, 29);
+            this.textBox9.TabIndex = 20;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label34.Location = new System.Drawing.Point(10, 213);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(144, 29);
+            this.label34.TabIndex = 19;
+            this.label34.Text = "Id Прораба:";
+            // 
             // textBox_Experience
             // 
             this.textBox_Experience.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -1311,6 +1361,7 @@
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel14.Controls.Add(this.label36);
             this.panel14.Controls.Add(this.label12);
             this.panel14.Controls.Add(this.pbPhoto);
             this.panel14.Controls.Add(this.dataGridView4_worker);
@@ -1329,6 +1380,16 @@
             this.label12.TabIndex = 7;
             this.label12.Text = "Рабочие:";
             // 
+            // pbPhoto
+            // 
+            this.pbPhoto.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pbPhoto.Location = new System.Drawing.Point(745, 29);
+            this.pbPhoto.Name = "pbPhoto";
+            this.pbPhoto.Size = new System.Drawing.Size(200, 180);
+            this.pbPhoto.TabIndex = 6;
+            this.pbPhoto.TabStop = false;
+            this.pbPhoto.Click += new System.EventHandler(this.pbPhoto_Click);
+            // 
             // dataGridView4_worker
             // 
             this.dataGridView4_worker.AllowUserToAddRows = false;
@@ -1338,7 +1399,7 @@
             this.dataGridView4_worker.Location = new System.Drawing.Point(12, 29);
             this.dataGridView4_worker.Name = "dataGridView4_worker";
             this.dataGridView4_worker.ReadOnly = true;
-            this.dataGridView4_worker.Size = new System.Drawing.Size(709, 258);
+            this.dataGridView4_worker.Size = new System.Drawing.Size(709, 234);
             this.dataGridView4_worker.TabIndex = 2;
             this.dataGridView4_worker.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_driver_CellClick);
             this.dataGridView4_worker.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_worker_CellContentClick);
@@ -1367,6 +1428,16 @@
             this.BUT_driver_ClearField.Text = "Очистить поля";
             this.BUT_driver_ClearField.UseVisualStyleBackColor = false;
             this.BUT_driver_ClearField.Click += new System.EventHandler(this.BUT_driver_ClearField_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::courseDataBase.Properties.Resources.magnifier_1_icon_icons_com_56924__1_;
+            this.pictureBox3.Location = new System.Drawing.Point(146, 14);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(49, 49);
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // textBox_driver_SEARCH
             // 
@@ -1642,6 +1713,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel7.Controls.Add(this.label37);
             this.panel7.Controls.Add(this.label8);
             this.panel7.Controls.Add(this.dataGridView3_foreman);
             this.panel7.Location = new System.Drawing.Point(3, 81);
@@ -1669,7 +1741,7 @@
             this.dataGridView3_foreman.Location = new System.Drawing.Point(5, 33);
             this.dataGridView3_foreman.Name = "dataGridView3_foreman";
             this.dataGridView3_foreman.ReadOnly = true;
-            this.dataGridView3_foreman.Size = new System.Drawing.Size(942, 229);
+            this.dataGridView3_foreman.Size = new System.Drawing.Size(942, 204);
             this.dataGridView3_foreman.TabIndex = 3;
             this.dataGridView3_foreman.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_foreman_CellClick);
             this.dataGridView3_foreman.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_foreman_CellContentClick);
@@ -1698,6 +1770,16 @@
             this.BUT_bus_ClearField.Text = "Очистить поля";
             this.BUT_bus_ClearField.UseVisualStyleBackColor = false;
             this.BUT_bus_ClearField.Click += new System.EventHandler(this.BUT_bus_ClearField_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::courseDataBase.Properties.Resources.magnifier_1_icon_icons_com_56924__1_;
+            this.pictureBox2.Location = new System.Drawing.Point(146, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(49, 49);
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // textBox_bus_SEARCH
             // 
@@ -1831,6 +1913,46 @@
             this.panel4.TabIndex = 15;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox8.Location = new System.Drawing.Point(181, 213);
+            this.textBox8.Multiline = true;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(430, 29);
+            this.textBox8.TabIndex = 18;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox7.Location = new System.Drawing.Point(160, 178);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(451, 29);
+            this.textBox7.TabIndex = 17;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label33.Location = new System.Drawing.Point(10, 213);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(165, 29);
+            this.label33.TabIndex = 16;
+            this.label33.Text = "id Заказчика:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.Location = new System.Drawing.Point(10, 178);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(144, 29);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Id Прораба:";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -1944,6 +2066,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel2.Controls.Add(this.label35);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.pictureBox_after);
@@ -1976,6 +2099,16 @@
             this.label6.Text = "До:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
+            // pictureBox_after
+            // 
+            this.pictureBox_after.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pictureBox_after.Location = new System.Drawing.Point(667, 180);
+            this.pictureBox_after.Name = "pictureBox_after";
+            this.pictureBox_after.Size = new System.Drawing.Size(281, 135);
+            this.pictureBox_after.TabIndex = 5;
+            this.pictureBox_after.TabStop = false;
+            this.pictureBox_after.Click += new System.EventHandler(this.pictureBox_after_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -1986,6 +2119,16 @@
             this.label1.Text = "Объекты:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // pictureBox_before
+            // 
+            this.pictureBox_before.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pictureBox_before.Location = new System.Drawing.Point(664, 18);
+            this.pictureBox_before.Name = "pictureBox_before";
+            this.pictureBox_before.Size = new System.Drawing.Size(281, 143);
+            this.pictureBox_before.TabIndex = 3;
+            this.pictureBox_before.TabStop = false;
+            this.pictureBox_before.Click += new System.EventHandler(this.pictureBox_before_Click);
+            // 
             // dataGridView1_oobject
             // 
             this.dataGridView1_oobject.AllowUserToAddRows = false;
@@ -1995,7 +2138,7 @@
             this.dataGridView1_oobject.Location = new System.Drawing.Point(12, 18);
             this.dataGridView1_oobject.Name = "dataGridView1_oobject";
             this.dataGridView1_oobject.ReadOnly = true;
-            this.dataGridView1_oobject.Size = new System.Drawing.Size(649, 297);
+            this.dataGridView1_oobject.Size = new System.Drawing.Size(649, 275);
             this.dataGridView1_oobject.TabIndex = 2;
             this.dataGridView1_oobject.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1_oobject.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_oobject_CellContentClick);
@@ -2024,6 +2167,16 @@
             this.OBJ_ClearFields.Text = "Очистить поля";
             this.OBJ_ClearFields.UseVisualStyleBackColor = false;
             this.OBJ_ClearFields.Click += new System.EventHandler(this.BUT_ClearFields_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::courseDataBase.Properties.Resources.magnifier_1_icon_icons_com_56924__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(151, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 49);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // textBox_SEARCH
             // 
@@ -2063,152 +2216,35 @@
             this.tabControl1.TabIndex = 8;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
-            // pictureBox_after
+            // label35
             // 
-            this.pictureBox_after.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox_after.Location = new System.Drawing.Point(667, 180);
-            this.pictureBox_after.Name = "pictureBox_after";
-            this.pictureBox_after.Size = new System.Drawing.Size(281, 135);
-            this.pictureBox_after.TabIndex = 5;
-            this.pictureBox_after.TabStop = false;
-            this.pictureBox_after.Click += new System.EventHandler(this.pictureBox_after_Click);
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label35.Location = new System.Drawing.Point(11, 296);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(20, 22);
+            this.label35.TabIndex = 8;
+            this.label35.Text = "  ";
             // 
-            // pictureBox_before
+            // label36
             // 
-            this.pictureBox_before.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox_before.Location = new System.Drawing.Point(664, 18);
-            this.pictureBox_before.Name = "pictureBox_before";
-            this.pictureBox_before.Size = new System.Drawing.Size(281, 143);
-            this.pictureBox_before.TabIndex = 3;
-            this.pictureBox_before.TabStop = false;
-            this.pictureBox_before.Click += new System.EventHandler(this.pictureBox_before_Click);
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label36.Location = new System.Drawing.Point(8, 266);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(25, 22);
+            this.label36.TabIndex = 9;
+            this.label36.Text = "   ";
             // 
-            // pictureBox1
+            // label37
             // 
-            this.pictureBox1.Image = global::courseDataBase.Properties.Resources.magnifier_1_icon_icons_com_56924__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(151, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 49);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::courseDataBase.Properties.Resources.magnifier_1_icon_icons_com_56924__1_;
-            this.pictureBox5.Location = new System.Drawing.Point(146, 14);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(49, 49);
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::courseDataBase.Properties.Resources.magnifier_1_icon_icons_com_56924__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(146, 14);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(49, 49);
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pbPhoto
-            // 
-            this.pbPhoto.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pbPhoto.Location = new System.Drawing.Point(745, 29);
-            this.pbPhoto.Name = "pbPhoto";
-            this.pbPhoto.Size = new System.Drawing.Size(200, 180);
-            this.pbPhoto.TabIndex = 6;
-            this.pbPhoto.TabStop = false;
-            this.pbPhoto.Click += new System.EventHandler(this.pbPhoto_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::courseDataBase.Properties.Resources.magnifier_1_icon_icons_com_56924__1_;
-            this.pictureBox3.Location = new System.Drawing.Point(146, 14);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(49, 49);
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::courseDataBase.Properties.Resources.magnifier_1_icon_icons_com_56924__1_;
-            this.pictureBox4.Location = new System.Drawing.Point(146, 14);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(49, 49);
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::courseDataBase.Properties.Resources.magnifier_1_icon_icons_com_56924__1_;
-            this.pictureBox6.Location = new System.Drawing.Point(146, 14);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(49, 49);
-            this.pictureBox6.TabIndex = 11;
-            this.pictureBox6.TabStop = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(10, 178);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(144, 29);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Id Прораба:";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label33.Location = new System.Drawing.Point(10, 213);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(165, 29);
-            this.label33.TabIndex = 16;
-            this.label33.Text = "id Заказчика:";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox7.Location = new System.Drawing.Point(160, 178);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(451, 29);
-            this.textBox7.TabIndex = 17;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox8.Location = new System.Drawing.Point(181, 213);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(430, 29);
-            this.textBox8.TabIndex = 18;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label34.Location = new System.Drawing.Point(10, 213);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(144, 29);
-            this.label34.TabIndex = 19;
-            this.label34.Text = "Id Прораба:";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox9.Location = new System.Drawing.Point(160, 213);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(451, 29);
-            this.textBox9.TabIndex = 20;
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label37.Location = new System.Drawing.Point(5, 240);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(25, 22);
+            this.label37.TabIndex = 10;
+            this.label37.Text = "   ";
             // 
             // AdminPage
             // 
@@ -2230,6 +2266,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6_step_construction)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.panel21.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
@@ -2240,9 +2277,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2_customer)).EndInit();
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel39.ResumeLayout(false);
             this.panel40.ResumeLayout(false);
             this.panel41.ResumeLayout(false);
@@ -2258,9 +2297,11 @@
             this.panel13.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPhoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4_worker)).EndInit();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.panel24.ResumeLayout(false);
             this.panel25.ResumeLayout(false);
@@ -2271,6 +2312,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3_foreman)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -2278,19 +2320,13 @@
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_after)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_before)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_oobject)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_after)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_before)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPhoto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2469,5 +2505,8 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
     }
 }

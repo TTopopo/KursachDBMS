@@ -6,6 +6,7 @@ using courseDataBase.Connection;
 using System.Drawing;
 using System.IO;
 using System.Xml.Linq;
+using System.Reflection.Emit;
 
 namespace courseDataBase
 {
@@ -54,13 +55,14 @@ namespace courseDataBase
 
             CreateColumsStepConstruction();
             RefreshDataGridStepConstruction(dataGridView6_step_construction);
-             
+
+            DisplayTransactionCount();
         }
         //===================кнопка обновления=======================//
         private void BUT_Refresh_Click(object sender, EventArgs e) // кнопка обновления информации в dataGridView1(объект)
         {
             RefreshDataGridOobject(dataGridView1_oobject);
-            ClearObject(); 
+            ClearObject();
         }
         private void button2_Click(object sender, EventArgs e)// кнопка обновления информации в dataGridView2(Клиент)
         {
@@ -76,10 +78,10 @@ namespace courseDataBase
         {
             RefreshDataGridWorker(dataGridView4_worker);
             ClearWorker();
-        } 
+        }
         private void button38_Click(object sender, EventArgs e)// кнопка обновления информации в dataGridView5(Этап Строительство)
         {
-            RefreshDataGridStageConstruction(dataGridView5_stage_construction); 
+            RefreshDataGridStageConstruction(dataGridView5_stage_construction);
             ClearStage();
         }
         private void button12_Click(object sender, EventArgs e)// кнопка обновления информации в dataGridView6(Шаг Строительство)
@@ -102,7 +104,7 @@ namespace courseDataBase
 
         private void BUT_Delete_Click(object sender, EventArgs e)// кнопка удаление записи ОБЪЕКТ
         {
-            DeleteRow(); 
+            DeleteRow();
             ClearObject();
         }
 
@@ -141,15 +143,15 @@ namespace courseDataBase
         {
             UpdateForeman();
         }
-       
 
-       
+
+
 
         //=============================//
         private void button1_Click(object sender, EventArgs e)//очистка клиент
         {
             ClearCustomer();
-        } 
+        }
         private void button3_Click(object sender, EventArgs e)// кнопка создания новой записи клиент
         {
             Add_Data_Customer add_Data_Customer = new Add_Data_Customer();
@@ -164,7 +166,7 @@ namespace courseDataBase
         {
             ChangeCustomer();
             ClearCustomer();
-        } 
+        }
         private void button4_Click(object sender, EventArgs e)// кнопка сохранить записи клиент
         {
             UpdateCustomer();
@@ -279,7 +281,7 @@ namespace courseDataBase
         {
             SearchStep(dataGridView6_step_construction);
         }
-         
+
 
         private void BUT_confirm_Click(object sender, EventArgs e)
         {
@@ -321,7 +323,7 @@ namespace courseDataBase
             var title = textBox_Title.Text;
             var address = textBox_Address.Text;
             var type = textBox_Type.Text;
-            var status = textBox_Status.Text;  
+            var status = textBox_Status.Text;
 
             if (dataGridView1_oobject.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
             {
@@ -333,15 +335,15 @@ namespace courseDataBase
         private void ChangeCustomer()//Клиент
         {
             var selectedRowIndex = dataGridView2_customer.CurrentCell.RowIndex;
-            
+
             var id = textBox2.Text;
             var name = textBox3.Text;
-            var lastName = textBox4.Text; 
-            var phoneNumber = textBox5.Text; 
+            var lastName = textBox4.Text;
+            var phoneNumber = textBox5.Text;
             if (dataGridView2_customer.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
-            { 
-                    dataGridView2_customer.Rows[selectedRowIndex].SetValues(id, name, lastName, phoneNumber);
-                    dataGridView2_customer.Rows[selectedRowIndex].Cells[4].Value = RowState.Modfield; 
+            {
+                dataGridView2_customer.Rows[selectedRowIndex].SetValues(id, name, lastName, phoneNumber);
+                dataGridView2_customer.Rows[selectedRowIndex].Cells[4].Value = RowState.Modfield;
             }
         }
 
@@ -359,8 +361,8 @@ namespace courseDataBase
 
             if (dataGridView3_foreman.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
             {
-                dataGridView3_foreman.Rows[selectedRowIndex].SetValues(id,Name, LastName, Qualification, Specialization, Skills, PhoneNumber);
-                dataGridView3_foreman.Rows[selectedRowIndex].Cells[7].Value = RowState.Modfield; 
+                dataGridView3_foreman.Rows[selectedRowIndex].SetValues(id, Name, LastName, Qualification, Specialization, Skills, PhoneNumber);
+                dataGridView3_foreman.Rows[selectedRowIndex].Cells[7].Value = RowState.Modfield;
             }
         }
         private void ChangeWorker()// рабочий
@@ -372,11 +374,11 @@ namespace courseDataBase
             var LastName = textBox_LastNamee.Text;
             var PhoneNumber = textBox_PhoneNumberr.Text;
             var Position = textBox_Position.Text;
-            var Experience = textBox_Experience.Text; 
+            var Experience = textBox_Experience.Text;
 
             if (dataGridView4_worker.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
             {
-                dataGridView4_worker.Rows[selectedRowIndex].SetValues(id, Name, LastName, PhoneNumber, Position, Experience );
+                dataGridView4_worker.Rows[selectedRowIndex].SetValues(id, Name, LastName, PhoneNumber, Position, Experience);
                 dataGridView4_worker.Rows[selectedRowIndex].Cells[7].Value = RowState.Modfield;
             }
         }
@@ -387,11 +389,11 @@ namespace courseDataBase
             var id = textBox31.Text;
             var StartDate = textBox32.Text;
             var СompletionDate = textBox33.Text;
-            var TitleStage = textBox34.Text; 
+            var TitleStage = textBox34.Text;
 
             if (dataGridView5_stage_construction.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
             {
-                dataGridView5_stage_construction.Rows[selectedRowIndex].SetValues(id, StartDate, СompletionDate, TitleStage );
+                dataGridView5_stage_construction.Rows[selectedRowIndex].SetValues(id, StartDate, СompletionDate, TitleStage);
                 dataGridView5_stage_construction.Rows[selectedRowIndex].Cells[4].Value = RowState.Modfield;
             }
         }
@@ -402,7 +404,7 @@ namespace courseDataBase
             var id = textBox18.Text;
             var StartDate = textBox19.Text;
             var СompletionDate = textBox20.Text;
-            var TitleStep = textBox21.Text; 
+            var TitleStep = textBox21.Text;
 
             if (dataGridView6_step_construction.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
             {
@@ -439,7 +441,7 @@ namespace courseDataBase
                     var title = dataGridView1_oobject.Rows[index].Cells[1].Value.ToString();
                     var adress = dataGridView1_oobject.Rows[index].Cells[2].Value.ToString();
                     var type = dataGridView1_oobject.Rows[index].Cells[3].Value.ToString();
-                    var status = dataGridView1_oobject.Rows[index].Cells[4].Value.ToString(); 
+                    var status = dataGridView1_oobject.Rows[index].Cells[4].Value.ToString();
 
                     var changeQuery = $"UPDATE oobject SET Title = '{title}', Addresss = '{adress}', Typee = '{type}', Statuss = '{status}'   WHERE id = '{id}'";
 
@@ -515,7 +517,7 @@ namespace courseDataBase
                     var Qualification = dataGridView3_foreman.Rows[index].Cells[3].Value.ToString();
                     var Specialization = dataGridView3_foreman.Rows[index].Cells[4].Value.ToString();
                     var Skills = dataGridView3_foreman.Rows[index].Cells[5].Value.ToString();
-                    var PhoneNumber = dataGridView3_foreman.Rows[index].Cells[6].Value.ToString(); 
+                    var PhoneNumber = dataGridView3_foreman.Rows[index].Cells[6].Value.ToString();
 
                     var changeQuery = $"UPDATE foreman SET Name = '{Name}', LastName = '{LastName}', Qualification = '{Qualification}', Specialization = '{Specialization}', Skills = '{Skills}', PhoneNumber = '{PhoneNumber}' WHERE id = '{id}'";
 
@@ -553,7 +555,7 @@ namespace courseDataBase
                     var LastName = dataGridView4_worker.Rows[index].Cells[2].Value.ToString();
                     var PhoneNumber = dataGridView4_worker.Rows[index].Cells[3].Value.ToString();
                     var Position = dataGridView4_worker.Rows[index].Cells[4].Value.ToString();
-                    var Experience = dataGridView4_worker.Rows[index].Cells[5].Value.ToString(); 
+                    var Experience = dataGridView4_worker.Rows[index].Cells[5].Value.ToString();
 
                     var changeQuery = $"UPDATE worker SET Nname = '{Nname}', LastName = '{LastName}', PhoneNumber = '{PhoneNumber}', Position = '{Position}', Experience = '{Experience}'  WHERE id = '{id}'";
 
@@ -590,7 +592,7 @@ namespace courseDataBase
                     var id = dataGridView5_stage_construction.Rows[index].Cells[0].Value.ToString();
                     var StartDate = dataGridView5_stage_construction.Rows[index].Cells[1].Value.ToString();
                     var СompletionDate = dataGridView5_stage_construction.Rows[index].Cells[2].Value.ToString();
-                    var TitleStage = dataGridView5_stage_construction.Rows[index].Cells[3].Value.ToString(); 
+                    var TitleStage = dataGridView5_stage_construction.Rows[index].Cells[3].Value.ToString();
 
                     var changeQuery = $"UPDATE stage_construction SET StartDate = '{StartDate}', СompletionDate = '{СompletionDate}', TitleStage = '{TitleStage}'  WHERE id = '{id}'";
 
@@ -623,10 +625,10 @@ namespace courseDataBase
 
                 if (rowState == RowState.Modfield)
                 {
-                    var id = dataGridView6_step_construction.Rows[index].Cells[0].Value.ToString();  
-                    var StartDate = dataGridView6_step_construction.Rows[index].Cells[3].Value.ToString();
-                    var СompletionDate = dataGridView6_step_construction.Rows[index].Cells[4].Value.ToString();
-                    var TitleStep = dataGridView6_step_construction.Rows[index].Cells[5].Value.ToString();
+                    var id = dataGridView6_step_construction.Rows[index].Cells[0].Value.ToString();
+                    var StartDate = dataGridView6_step_construction.Rows[index].Cells[1].Value.ToString();
+                    var СompletionDate = dataGridView6_step_construction.Rows[index].Cells[2].Value.ToString();
+                    var TitleStep = dataGridView6_step_construction.Rows[index].Cells[3].Value.ToString();
 
                     var changeQuery = $"UPDATE step_construction SET StartDate = '{StartDate}', СompletionDate = '{СompletionDate}', TitleStep = '{TitleStep}' WHERE id = '{id}'";
 
@@ -645,7 +647,7 @@ namespace courseDataBase
             textBox_Title.Text = string.Empty;
             textBox_Address.Text = string.Empty;
             textBox_Type.Text = string.Empty;
-            textBox_Status.Text = string.Empty;  
+            textBox_Status.Text = string.Empty;
         }
         private void ClearCustomer() //очистка клиент
         {
@@ -671,23 +673,23 @@ namespace courseDataBase
             textBox_LastNamee.Text = string.Empty;
             textBox_PhoneNumberr.Text = string.Empty;
             textBox_Position.Text = string.Empty;
-            textBox_Experience.Text = string.Empty; 
+            textBox_Experience.Text = string.Empty;
         }
         private void ClearStage()//очистка этапа
         {
             textBox31.Text = string.Empty;
             textBox32.Text = string.Empty;
             textBox33.Text = string.Empty;
-            textBox34.Text = string.Empty; 
-        } 
-       
+            textBox34.Text = string.Empty;
+        }
+
 
         private void ClearStep() //очистка шага
         {
             textBox18.Text = string.Empty;
             textBox19.Text = string.Empty;
             textBox20.Text = string.Empty;
-            textBox21.Text = string.Empty; 
+            textBox21.Text = string.Empty;
         }
 
         private void DeleteRow()// ОБЪЕКТ
@@ -799,7 +801,7 @@ namespace courseDataBase
 
         private void SearchForeman(DataGridView dgw_foreman) // поиск прораб
         {
-            dgw_foreman.Rows.Clear(); 
+            dgw_foreman.Rows.Clear();
             string searchString = $"SELECT * FROM foreman WHERE concat (id, Nname, LastName, Qualification, Specialization, Skills, PhoneNumber) like '%" + textBox_bus_SEARCH.Text + "%'";
 
             SqlCommand command = new SqlCommand(searchString, database.getConnection());
@@ -814,7 +816,7 @@ namespace courseDataBase
             }
 
             read.Close();
-        } 
+        }
         private void SearchWorker(DataGridView dgw_worker) // поиск  рабочего
         {
             dgw_worker.Rows.Clear();
@@ -833,7 +835,7 @@ namespace courseDataBase
 
             read.Close();
         }
-        
+
         private void SearchStage(DataGridView dgw_stage_construction) // поиск этапа
         {
             dgw_stage_construction.Rows.Clear();
@@ -936,7 +938,7 @@ namespace courseDataBase
             {
                 database.closeConnection();
             }
-            
+
         }
         private void dataGridView2_customer_CellClick(object sender, DataGridViewCellEventArgs e)//клиент
         {
@@ -949,7 +951,7 @@ namespace courseDataBase
                 textBox2.Text = row.Cells[0].Value.ToString();
                 textBox3.Text = row.Cells[1].Value.ToString();
                 textBox4.Text = row.Cells[2].Value.ToString();
-                textBox5.Text = row.Cells[3].Value.ToString(); 
+                textBox5.Text = row.Cells[3].Value.ToString();
             }
         }
         private void dataGridView3_foreman_CellClick(object sender, DataGridViewCellEventArgs e)//Прораб
@@ -962,11 +964,11 @@ namespace courseDataBase
 
                 textBox6.Text = row.Cells[0].Value.ToString();
                 textBox_Name.Text = row.Cells[1].Value.ToString();
-                textBox_LastName.Text = row.Cells[2].Value.ToString(); 
+                textBox_LastName.Text = row.Cells[2].Value.ToString();
                 textBox_Qualification.Text = row.Cells[3].Value.ToString();
                 textBox_Specialization.Text = row.Cells[4].Value.ToString();
                 textBox_Skills.Text = row.Cells[5].Value.ToString();
-                textBox_PhoneNumber.Text = row.Cells[6].Value.ToString(); 
+                textBox_PhoneNumber.Text = row.Cells[6].Value.ToString();
             }
         }
         private void dataGridView5_stage_construction_CellClick(object sender, DataGridViewCellEventArgs e)//этап
@@ -980,8 +982,8 @@ namespace courseDataBase
                 textBox31.Text = row.Cells[0].Value.ToString();
                 textBox32.Text = row.Cells[1].Value.ToString();
                 textBox33.Text = row.Cells[2].Value.ToString();
-                textBox34.Text = row.Cells[3].Value.ToString(); 
-            } 
+                textBox34.Text = row.Cells[3].Value.ToString();
+            }
         }
         private void dataGridView6_step_construction_CellClick(object sender, DataGridViewCellEventArgs e)//шаг
         {
@@ -994,10 +996,10 @@ namespace courseDataBase
                 textBox18.Text = row.Cells[0].Value.ToString();
                 textBox19.Text = row.Cells[1].Value.ToString();
                 textBox20.Text = row.Cells[2].Value.ToString();
-                textBox21.Text = row.Cells[3].Value.ToString(); 
+                textBox21.Text = row.Cells[3].Value.ToString();
             }
         }
-         
+
 
         private void dataGridView_driver_CellClick(object sender, DataGridViewCellEventArgs e)//рабочий
         {
@@ -1013,7 +1015,7 @@ namespace courseDataBase
                 textBox_PhoneNumberr.Text = row.Cells[3].Value.ToString();
                 textBox_Position.Text = row.Cells[4].Value.ToString();
                 textBox_Experience.Text = row.Cells[5].Value.ToString();
-                 
+
                 //selectedRowDriver = int.Parse(row.Cells[4].Value.ToString());
                 //selectedIdImage = int.Parse(row.Cells[0].Value.ToString());
             }
@@ -1090,7 +1092,7 @@ namespace courseDataBase
             dataGridView3_foreman.Columns.Add("Qualification", "Квалификация");
             dataGridView3_foreman.Columns.Add("Specialization", "Специализация");
             dataGridView3_foreman.Columns.Add("Skills", "Навыки");
-            dataGridView3_foreman.Columns.Add("PhoneNumber", "Номер телефона"); 
+            dataGridView3_foreman.Columns.Add("PhoneNumber", "Номер телефона");
             dataGridView3_foreman.Columns.Add("IsNew", String.Empty);
         }
         private void CreateColumsCustomer() // инициализация столбцов для dataGridView2_customer
@@ -1116,7 +1118,7 @@ namespace courseDataBase
             dataGridView4_worker.Columns.Add("id_Prorab", "id_Prorab");
             dataGridView4_worker.Columns.Add("IsNew", String.Empty);
         }
-         
+
         private void CreateColumsStageConstruction() // инициализация столбцов для dataGridView5_stage_construction
         {
             dataGridView5_stage_construction.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -1139,7 +1141,7 @@ namespace courseDataBase
             dataGridView6_step_construction.Columns.Add("IsNew", String.Empty);
         }
 
-       //========================= =========================//
+        //========================= =========================//
 
         private void ReadSingleRowOobject(DataGridView dgw_oobject, IDataRecord record)//объект
         {
@@ -1155,14 +1157,14 @@ namespace courseDataBase
             }
 
             dgw_oobject.Rows.Add(record.GetInt32(0), record.GetString(1), record.GetString(2), record.GetString(3), record.GetString(4), value5, value6, RowState.ModfieldNew);
-        } 
+        }
         private void ReadSingleRowCustomer(DataGridView dgw_customer, IDataRecord record)//клиент
         {
             dgw_customer.Rows.Add(record.GetInt32(0), record.GetString(1), record.GetString(2), record.GetString(3), RowState.ModfieldNew);
         }
         private void ReadSingleRowForeman(DataGridView dgw_foreman, IDataRecord record)//Прораб
         {
-            dgw_foreman.Rows.Add(record.GetInt32(0), record.GetString(1), record.GetString(2), record.GetString(3), record.GetString(4), record.GetString(5), record.GetString(6),  RowState.ModfieldNew);
+            dgw_foreman.Rows.Add(record.GetInt32(0), record.GetString(1), record.GetString(2), record.GetString(3), record.GetString(4), record.GetString(5), record.GetString(6), RowState.ModfieldNew);
         }
         private void ReadSingleRowWorker(DataGridView dgw_worker, IDataRecord record)//рабочий   
         {
@@ -1172,7 +1174,7 @@ namespace courseDataBase
                 value6 = record.GetInt32(6);
             }
             dgw_worker.Rows.Add(record.GetInt32(0), record.GetString(1), record.GetString(2), record.GetString(3), record.GetString(4), record.GetString(5), value6, RowState.ModfieldNew);
-        } 
+        }
         private void ReadSingleRowStageConstruction(DataGridView dgw_stage_construction, IDataRecord record)//этап
         {
             dgw_stage_construction.Rows.Add(record.GetInt32(0), record.GetDateTime(1), record.GetDateTime(2), record.GetString(3), RowState.ModfieldNew);
@@ -1180,12 +1182,10 @@ namespace courseDataBase
         private void ReadSingleGridStepConstruction(DataGridView dgw_step_construction, IDataRecord record)//шаг
         {
             dgw_step_construction.Rows.Add(record.GetInt32(0), record.GetDateTime(1), record.GetDateTime(2), record.GetString(3), RowState.ModfieldNew);
-        } 
+        }
         //============================ ============================//
         private void RefreshDataGridOobject(DataGridView dgw_oobject)//объект
         {
-            dgw_oobject.Rows.Clear();
-
             string queryString = $"select * from oobject";
 
             SqlCommand command = new SqlCommand(queryString, database.getConnection());
@@ -1199,6 +1199,7 @@ namespace courseDataBase
                 ReadSingleRowOobject(dgw_oobject, reader);
             }
             reader.Close();
+
         }
         private void RefreshDataGridCustomer(DataGridView dgw_customer)//клиетн
         {
@@ -1237,7 +1238,7 @@ namespace courseDataBase
             reader.Close();
         }
 
-        
+
 
         private void RefreshDataGridWorker(DataGridView dgw_worker)
         {
@@ -1294,9 +1295,49 @@ namespace courseDataBase
             }
             reader.Close();
         }
-         
-         
 
+
+        // хранимые процедуры
+        private void DisplayTransactionCount()
+        {
+            database.openConnection();
+
+            using (SqlCommand command = new SqlCommand("CalculateObjectCount", database.getConnection()))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+
+                database.openConnection();
+                int totalCount = (int)command.ExecuteScalar();
+                database.closeConnection();
+
+                label35.Text = $"Количество объектов в таблице: {totalCount}";
+            }
+
+
+            using (SqlCommand command = new SqlCommand("CountForeman", database.getConnection()))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+
+                database.openConnection();
+                int totalCount = (int)command.ExecuteScalar();
+                database.closeConnection();
+
+                label37.Text = $"Количество рабочих в таблице: {totalCount}";
+
+            }
+
+            using (SqlCommand command = new SqlCommand("CountWorkers", database.getConnection()))
+            {
+                command.CommandType = CommandType.StoredProcedure;
+
+                database.openConnection();
+                int totalCount = (int)command.ExecuteScalar();
+                database.closeConnection();
+
+                label36.Text = $"Количество прорабов в таблице: {totalCount}";
+
+            }
+        }
         private void dataGridView_Confirm_Transaction_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             selectedColumnValue = e.RowIndex + 1;
@@ -1512,7 +1553,7 @@ namespace courseDataBase
 
         }
 
-        
+
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
